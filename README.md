@@ -1,5 +1,7 @@
 # JSONL
 
+[![CI](https://github.com/Sija/jsonl.cr/actions/workflows/ci.yml/badge.svg)](https://github.com/Sija/jsonl.cr/actions/workflows/ci.yml) [![Releases](https://img.shields.io/github/release/Sija/jsonl.cr.svg)](https://github.com/Sija/jsonl.cr/releases) [![License](https://img.shields.io/github/license/Sija/jsonl.cr.svg)](https://github.com/Sija/jsonl.cr/blob/master/LICENSE)
+
 JSONL is a module for handling [JSONL](http://jsonlines.org) (JSON Lines) parsing.
 
 ## Installation
