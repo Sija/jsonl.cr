@@ -41,13 +41,19 @@ class User
   property last_name : String
 end
 
-users = User.from_jsonl <<-JSONL
+input = <<-JSONL
   {"id": 1, "first_name": "John", "last_name": "Doe"}
   {"id": 2, "first_name": "Mary", "last_name": "Poppins"}
   {"id": 3, "first_name": "Jack", "last_name": "Black"}
   JSONL
 
+users = User.from_jsonl(input)
 users.class # => Array(User)
+
+# no array allocation here
+User.from_jsonl(input) do |user|
+  user.class # => User
+end
 ```
 
 ## Contributing
