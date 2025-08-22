@@ -1,7 +1,7 @@
 require "json"
 
+require "./core_ext/**"
 require "./jsonl/**"
-require "./ext/**"
 
 module JSONL
   def self.parse(input : String | IO) : Array(JSON::Any)
