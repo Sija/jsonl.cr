@@ -1,5 +1,5 @@
 class Object
-  def self.from_jsonl(input : String | IO, &) : Nil
+  def self.from_jsonl(input : String | IO, & : self ->) : Nil
     JSONL.parse(input) do |line|
       yield from_json(line)
     end
