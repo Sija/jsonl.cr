@@ -12,15 +12,8 @@ module JSONL
     end
   end
 
-  def self.parse(input : String, &) : Nil
-    io = IO::Memory.new(input)
-    parse(io) do |line|
-      yield line
-    end
-  end
-
-  def self.parse(input : IO, &) : Nil
-    # input.rewind
+  def self.parse(input : String | IO, & : String ->) : Nil
+    # input.rewind if input.is_a?(IO)
     input.each_line do |line|
       yield line
     end
